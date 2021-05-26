@@ -124,7 +124,7 @@ userName.addEventListener('blur', setName);
 
 /*
 
-http://api.openweathermap.org/data/2.5/weather?q=Sydney&units=metric&appid=7b069d76e3865c86d3513410c18a4226
+https://api.openweathermap.org/data/2.5/weather?q=Sydney&units=metric&appid=7b069d76e3865c86d3513410c18a4226
 
 */
 
@@ -132,7 +132,7 @@ let weather = {
   apiKey: "7b069d76e3865c86d3513410c18a4226",
   fetchWeather: function(city) {
     fetch(
-      "http://api.openweathermap.org/data/2.5/weather?q="
+      "https://api.openweathermap.org/data/2.5/weather?q="
        + city
        + "&units=metric&appid=" 
        + this.apiKey
@@ -149,7 +149,7 @@ let weather = {
       const { speed } = data.wind;
       
       document.querySelector('.city').innerText = `Weather in ${name}, ${country}`;
-      document.querySelector('.icon').src = `http://openweathermap.org/img/w/${icon}.png`
+      document.querySelector('.icon').src = `https://openweathermap.org/img/w/${icon}.png`
       document.querySelector('.description').innerText = description;
       document.querySelector('.temp').innerText = `${Math.round(temp)}°C`;
       document.querySelector('.humidity').innerText = `Humidity: ${humidity}%`;
